@@ -1,1 +1,0 @@
-# emorfiq-test-task

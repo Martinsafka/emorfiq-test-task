@@ -1,0 +1,13 @@
+.ProductCard-priceOld {
+  text-decoration: line-through;
+}
+
+.ProductCard-priceOld, .ProductCard-price {
+  display: inline-block;
+}
+
+.ProductCard-title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

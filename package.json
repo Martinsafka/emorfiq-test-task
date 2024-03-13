@@ -1,0 +1,17 @@
+{
+  "name": "emorfiq-frontend-demo-task",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "license": "ISC",
+  "scripts": {
+    "development": "vite",
+    "production": "vite build",
+    "sass": "node-sass assets/scss/index.scss -o dist/app.css"
+  },
+  "devDependencies": {
+    "sass": "^1.70.0",
+    "vite": "^5.1.0"
+  }
+}

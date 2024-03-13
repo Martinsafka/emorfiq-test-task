@@ -1,0 +1,16 @@
+$badge-types: (
+        rectangle: (
+                '': (
+                        0: (
+                                padding: 0 1.2rem,
+                                font-size: var(--fs-400),
+                                line-height: 2.6rem,
+                                font-weight: $ui-fw-bolder,
+                                text-transform: uppercase,
+                                border-radius: .6rem,
+                                background-color: var(--background, $ui-color-gray-500),
+                                --badgeColor: var(--color, $ui-color-white),
+                        )
+                ),
+        ),
+);

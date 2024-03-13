@@ -1,0 +1,98 @@
+@layer components.eshop {
+  .ProductCard:hover .ProductCard-variants {
+    @include change-value(opacity, $productCard__mobile-variants-hover-opacity, none);
+  }
+
+  .ProductCard-variants {
+    @include change-value(padding, $productCard__mobile-variants-padding, none);
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+
+    display: block;
+    width: 100%;
+    @include change-value(background, $productCard__mobile-variants-background, none);
+    opacity: 0;
+    z-index: 1;
+    @include change-value(transition, $productCard__mobile-variants-transitions, none);
+  }
+
+  .ProductCard-variants__title {
+    @include change-value(margin, $productCard__mobile-variants__title-margin, none);
+    @include change-value(font-size, $productCard__mobile-variants__title-font-size, none);
+    @include change-value(line-height, $productCard__mobile-variants__title-line-height, none);
+    @include change-value(color, $productCard__mobile-variants__title-color, none);
+    @include change-value(font-family, $productCard__mobile-variants__title-font-family, none);
+  }
+
+  .ProductCard-variants__itemList {
+    list-style: none;
+    @include change-value(margin, $productCard__mobile-variants__itemList-margin, none);
+    @include change-value(padding, $productCard__mobile-variants__itemList-padding, none);
+    display: flex;
+    flex-flow: row wrap;
+    place-items: center;
+    @include change-value(gap, $productCard__mobile-variants__itemList-gap, none);
+
+    li {
+      list-style: none;
+      z-index: 1;
+      position: relative;
+    }
+
+    a {
+      @include change-value(padding,$productCard__mobile-variants__itemList-item-padding , none);
+      @include change-value(min-width, $productCard__mobile-variants__itemList-item-min-width, none);
+      @include change-value(min-height, $productCard__mobile-variants__itemList-item-min-height, none);
+      display: flex;
+      place-items: center;
+      place-content: center;
+      @include change-value(font-size, $productCard__mobile-variants__itemList-item-font-size, none);
+      text-align: center;
+      @include change-value(color, $productCard__mobile-variants__itemList-item-color, none);
+      @include change-value(box-shadow, $productCard__mobile-variants__itemList-item-box-shadow, none);
+      @include change-value(border-radius, $productCard__mobile-variants__itemList-item-border-radius, none);
+      text-decoration: none;
+      cursor: pointer;
+      @include change-value(text-transform, $productCard__mobile-variants__itemList-item-text-transform, none);
+      @include change-value(transition, $productCard__mobile-variants__itemList-item-transition, none);
+
+      &:hover, &:focus, &:focus-within {
+        @include change-value(box-shadow, $productCard__mobile-variants__itemList-item-hover-box-shadow, none);
+        @include change-value(border-radius, $productCard__mobile-variants__itemList-item-hover-border-radius, none);
+        @include change-value(color, $productCard__mobile-variants__itemList-item-hover-color, none);
+      }
+    }
+  }
+
+  @include media-breakpoint-up($product-card-breakpoint) {
+    .ProductCard:hover .ProductCard-variants {
+      @include change-value(opacity, $productCard__desktop-variants-hover-opacity, $productCard__mobile-variants-hover-opacity);
+    }
+
+    .ProductCard-variants {
+      @include change-value(padding, $productCard__desktop-variants-padding, $productCard__mobile-variants-padding);
+    }
+
+    .ProductCard-variants__title {
+      @include change-value(margin, $productCard__desktop-variants__title-margin, $productCard__mobile-variants__title-margin);
+      @include change-value(font-size, $productCard__desktop-variants__title-font-size, $productCard__mobile-variants__title-font-size);
+      @include change-value(line-height, $productCard__desktop-variants__title-line-height, $productCard__mobile-variants__title-line-height);
+    }
+
+    .ProductCard-variants__itemList {
+      @include change-value(margin, $productCard__desktop-variants__itemList-margin, $productCard__mobile-variants__itemList-margin);
+      @include change-value(padding, $productCard__desktop-variants__itemList-padding, $productCard__mobile-variants__itemList-padding);
+      @include change-value(gap, $productCard__desktop-variants__itemList-gap, $productCard__mobile-variants__itemList-gap);
+    }
+
+    .ProductCard-variants__itemList a {
+      @include change-value(padding, $productCard__desktop-variants__itemList-item-padding, $productCard__mobile-variants__itemList-item-padding);
+      @include change-value(min-width, $productCard__desktop-variants__itemList-item-min-width, $productCard__mobile-variants__itemList-item-min-width);
+      @include change-value(min-height, $productCard__desktop-variants__itemList-item-min-height, $productCard__mobile-variants__itemList-item-min-height);
+      @include change-value(font-size, $productCard__desktop-variants__itemList-item-font-size, $productCard__mobile-variants__itemList-item-font-size);
+    }
+  }
+}
